@@ -109,16 +109,6 @@ object CookbookAnalyzer extends App {
 //  for { (k, v) <- finalRes if v.contains(value) } yield k
 //  {
 
-
-
-//  val filteredMap = finalRes.flatMap{
-//    case (k:String, v:Seq[String]) => Some(k -> v)
-//    case (_, null) => None
-//    case (k:String, v:Seq[String]) if v.nonEmpty => Some(k -> v)
-//    case _ => None
-//  }
-//  filteredMap.foreach(println)
-
 //  finalRes.foreach(println)
 
 // val finalRes =  res1.flatMap{ case (key,value) => if (value.contains(s"$ingredients")) Seq(key,value) else Seq() }
