@@ -39,7 +39,7 @@ object CookbookAnalyzer extends App {
   val endLine = findNeedle(lines, needle = "Put all the ingredients, save the salt, chocolate and flavoring, over")
   val slicedLines = lines.slice(startLine, endLine)
 
-  val recipeTitles = slicedLines.filter(line => line.toUpperCase == line && line.nonEmpty)
+  val recipeTitles = slicedLines.filter(line => line.toUpperCase == line && !line.startsWith("   ") && line.nonEmpty)
   val ingredients = slicedLines.filter(line => line.startsWith("   ") && line.nonEmpty)
 
 
